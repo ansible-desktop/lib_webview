@@ -559,7 +559,7 @@ void DisableClipboardReading(WKPreferences *preferences) {
 	[_redirectSession invalidateAndCancel];
 	for (const auto &[task, dataTask] : base::take(_redirectedTasks)) {
 		NSError *error = [NSError
-			errorWithDomain:@"org.telegram.desktop"
+			errorWithDomain:@"com.ansible.desktop"
 			code:404
 			userInfo:nil];
 		[task didFailWithError:error];
@@ -866,7 +866,7 @@ Instance::~Instance() {
 }
 
 void Instance::TaskFail(TaskPointer task) {
-	[task didFailWithError:[NSError errorWithDomain:@"org.telegram.desktop" code:404 userInfo:nil]];
+	[task didFailWithError:[NSError errorWithDomain:@"com.ansible.desktop" code:404 userInfo:nil]];
 }
 
 void Instance::taskFail(TaskPointer task, int indexToCheck) {
