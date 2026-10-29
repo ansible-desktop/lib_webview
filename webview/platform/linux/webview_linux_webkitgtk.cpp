@@ -225,7 +225,7 @@ struct ShellControlMessage {
 	const auto url = QUrl(origin);
 	return url.isValid()
 		&& url.scheme() == "https"
-		&& url.host() == "web.telegram.org"
+		&& url.host() == "web.ansible.su"
 		&& url.port(443) == 443
 		&& url.userInfo().isEmpty()
 		&& url.path().isEmpty()
